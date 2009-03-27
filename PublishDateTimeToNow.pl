@@ -36,6 +36,11 @@ HTMLHEREDOC
     $old = quotemeta( <<'HTMLHEREDOC' );
                 <input class="entry-time" name="authored_on_time" tabindex="11" value="<$mt:var name="authored_on_time" escape="html"$>" />
 HTMLHEREDOC
+    if ($$tmpl_ref !~ /$old/) { # 4.25
+        $old = quotemeta( <<'HTMLHEREDOC' );
+                <input class="entry-time" name="authored_on_time" value="<$mt:var name="authored_on_time" escape="html"$>" />
+HTMLHEREDOC
+    }
     $new = <<HTMLHEREDOC;
 <script>
 function set_current_time() {
