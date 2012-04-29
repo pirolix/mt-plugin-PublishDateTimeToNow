@@ -1,4 +1,5 @@
 package MT::Plugin::OMV::PublishDateTimeToNow;
+# $Id$
 # PublishDateTimeToNow
 #       Copyright (c) 2008 Open MagicVox.net - http://www.magicvox.net/
 
